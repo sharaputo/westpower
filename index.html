@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>WestPower Test Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="top" tabIndex="0">
+  <!-- SVG icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+      <symbol id="edit" viewBox="0 0 16 15">
+        <title>Edit input</title>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M14.5631 13.3296C14.8736 13.3296 15.1256 13.5816 15.1256 13.8921C15.1256 14.2026 14.8736 14.4546 14.5631 14.4546H9.12335C8.81285 14.4546 8.56085 14.2026 8.56085 13.8921C8.56085 13.5816 8.81285 13.3296 9.12335 13.3296H14.5631ZM11.0874 0.740171C11.1249 0.769421 12.3797 1.74442 12.3797 1.74442C12.8357 2.01592 13.1919 2.50117 13.3269 3.07567C13.4612 3.64417 13.3637 4.23067 13.0509 4.72642C13.0489 4.72973 13.0468 4.73299 13.0395 4.74271L13.0339 4.75022C12.9831 4.81713 12.7625 5.09617 11.6487 6.49161C11.6383 6.5099 11.6266 6.52703 11.6138 6.54367C11.595 6.5682 11.5746 6.59076 11.5528 6.61129C11.4768 6.70694 11.3965 6.80745 11.3122 6.91312L11.1412 7.12722C10.7885 7.56895 10.3701 8.09275 9.87379 8.71404L9.61906 9.03287C8.6608 10.2322 7.43357 11.7679 5.86145 13.7347C5.5172 14.1637 5.0012 14.4134 4.44695 14.4202L1.7177 14.4547H1.7102C1.44995 14.4547 1.22345 14.2762 1.1627 14.0219L0.54845 11.4187C0.4217 10.8794 0.5477 10.3229 0.89345 9.89092L7.95845 1.05442C7.96145 1.05142 7.9637 1.04767 7.9667 1.04467C8.74145 0.118421 10.1424 -0.0180791 11.0874 0.740171ZM7.17074 3.84019L1.7717 10.5937C1.64345 10.7542 1.5962 10.9612 1.64345 11.1599L2.1542 13.3237L4.43345 13.2952C4.6502 13.2929 4.85045 13.1962 4.9832 13.0312C5.66681 12.1759 6.52599 11.1008 7.40934 9.99545L7.72187 9.60436L8.03492 9.2126C8.86336 8.17585 9.68179 7.15149 10.3666 6.29409L7.17074 3.84019ZM8.83295 1.76242L7.87349 2.96119L11.0691 5.41439C11.6842 4.64396 12.0888 4.13654 12.1262 4.08817C12.2492 3.88867 12.2972 3.60667 12.2327 3.33517C12.1667 3.05692 11.9934 2.82067 11.7437 2.66992C11.6904 2.63317 10.4267 1.65217 10.3877 1.62142C9.9122 1.24042 9.21845 1.30642 8.83295 1.76242Z" />
+      </symbol>
+      <symbol id="telegram" viewBox="0 0 42 42">
+        <title>Telegram</title>
+        <rect width="42" height="42" rx="21" fill="#27A6E5" />
+        <path
+          d="M29.4 13.2323L26.2443 29.7069C26.2443 29.7069 25.8028 30.8491 24.5898 30.3013L17.3088 24.5202L17.275 24.5031C18.2585 23.5886 25.885 16.4878 26.2183 16.1659C26.7343 15.6674 26.414 15.3706 25.8149 15.7472L14.5496 23.1556L10.2035 21.6413C10.2035 21.6413 9.51957 21.3893 9.45377 20.8415C9.38711 20.2928 10.226 19.9961 10.226 19.9961L27.9438 12.7984C27.9438 12.7984 29.4 12.1358 29.4 13.2323V13.2323Z"
+          fill="#FEFEFE" />
+      </symbol>
+      <symbol id="vk" viewBox="0 0 42 42">
+        <title>Vkontakte</title>
+        <rect width="42" height="42" rx="21" fill="#0077FF" />
+        <path
+          d="M22.0316 28.35C14.1393 28.35 9.63757 22.832 9.45 13.65H13.4034C13.5333 20.3894 16.4478 23.244 18.7564 23.8326V13.65H22.4789V19.4623C24.7586 19.2122 27.1537 16.5635 27.9617 13.65H31.6843C31.3798 15.1611 30.7729 16.5918 29.9015 17.8527C29.0301 19.1135 27.9129 20.1775 26.6199 20.978C28.0632 21.7094 29.338 22.7446 30.3602 24.0154C31.3824 25.2861 32.1288 26.7635 32.55 28.35H28.4523C28.0742 26.972 27.3057 25.7385 26.2431 24.804C25.1805 23.8695 23.871 23.2757 22.4789 23.0969V28.35H22.0316V28.35Z"
+          fill="white" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- Header & top menu -->
+  <header class="header">
+    <div class="container">
+      <button type="button" class="burger" id="burger">
+        <span class="burger__line burger__line--top"></span>
+        <span class="burger__line burger__line--bottom"></span>
+      </button>
+      <nav class="menu" id="menu">
+        <a href="#home" class="menu__link">главная</a>
+        <a href="#account" class="menu__link">личный кабинет</a>
+        <a href="#profile" class="menu__link">профиль и интересы</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <div class="wp-wrapper">
+
+    <div class="container wp-wrapper__container">
+
+      <!-- Aside menu -->
+      <aside class="wp-aside">
+        <nav class="nav">
+          <a href="#bonuses" class="nav__link">бонусы и предложения</a>
+          <a href="#profile&interests" class="nav__link active">профиль и интересы</a>
+          <a href="#purchases" class="nav__link">мои покупки</a>
+          <a href="#favourite" class="nav__link">избранное</a>
+          <a href="#personal-manager" class="nav__link">персональный менеджер</a>
+        </nav>
+      </aside>
+
+      <!-- Main content -->
+      <div class="wp-main">
+        <main class="main">
+          <!-- Profile settings -->
+          <section class="profile">
+            <h1 class="section-title profile__title">
+              профиль и интересы
+            </h1>
+            <p class="section-text profile__info">
+              Здесь вы можете изменять свой email и пароль, а также указать дополнительные номера телефонов
+              для использован ия вашей
+              карты и указать свои интересы
+            </p>
+            <form class="wp-form profile__form" id="profile_form">
+              <ul class="wp-form__list" role="none">
+                <li class="wp-form__field">
+                  <label for="email" class="wp-form__label">
+                    <span class="title">Email</span>
+                    <div class="progress">+2%</div>
+                  </label>
+                  <input type="email" class="wp-form__input" id="email" name="email" placeholder="ivan@mail.ru"
+                    disabled>
+                  <button type="button" class="wp-form__action edit">
+                    <svg width="42" height="42" class="icon">
+                      <use xlink:href="#edit" />
+                    </svg>
+                    <span class="label">изменить</span>
+                  </button>
+                </li>
+                <li class="wp-form__field">
+                  <label for="password" class="wp-form__label">
+                    <span class="title">Пароль</span>
+                  </label>
+                  <input type="password" class="wp-form__input" id="password" name="password" placeholder="*****"
+                    disabled>
+                  <button type="button" class="wp-form__action edit">
+                    <svg width="42" height="42" class="icon">
+                      <use xlink:href="#edit" />
+                    </svg>
+                    <span class="label">изменить</span>
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </section>
+
+          <!-- Phones settings -->
+          <section class="phones">
+            <h2 class="section-title phones__title">
+              дополнительные контактные телефоны
+            </h2>
+            <p class="section-text phones__info">
+              Вы можете добавить до двух дополнительных номеров телефона.
+              Указанные номера могут быть использованы членами вашей семьи для получения скидки, накопления баллов и
+              покупок по вашей
+              карте
+            </p>
+            <form class="wp-form phones__form" id="phones_form">
+              <ul class="wp-form__list" role="none">
+                <li class="wp-form__field">
+                  <label for="phone01" class="wp-form__label">
+                    <span class="title">Телефон 1</span>
+                  </label>
+                  <input type="tel" class="wp-form__input" id="phone01" name="phone01" placeholder="+7(___)___-____"
+                    disabled>
+                  <button type="button" class="wp-form__action edit">
+                    <svg width="42" height="42" class="icon">
+                      <use xlink:href="#edit" />
+                    </svg>
+                    <span class="label">изменить</span>
+                  </button>
+                </li>
+                <li class="wp-form__field">
+                  <label for="phone02" class="wp-form__label">
+                    <span class="title">Телефон 2</span>
+                  </label>
+                  <input type="tel" class="wp-form__input" id="phone02" name="phone02" placeholder="+7(___)___-____"
+                    disabled>
+                  <button type="button" class="wp-form__action edit">
+                    <svg width="42" height="42" class="icon">
+                      <use xlink:href="#edit" />
+                    </svg>
+                    <span class="label">изменить</span>
+                  </button>
+                </li>
+              </ul>
+            </form>
+          </section>
+
+          <!-- Discount -->
+          <section class="discount">
+            <h2 class="section-title">Подписка на увеличенную скидку</h2>
+            <p class="section-text discount__info">
+              Вы можете выбрать один магазин для предоставления увеличенной скидки. Выбор можно сделать не более 1 раза
+              в месяц. По
+              истечению календарного месяца скидка будет обнулена автоматически
+            </p>
+            <div class="select discount__select">
+              <button type="button" class="select__header" id="select_btn">
+                <span class="label">Выберите магазин</span>
+              </button>
+
+              <form class="checkboxes-form discount-form" id="discount_form">
+                <ul class="discount-form__list" role="none">
+                  <li class="checkboxes-form__field">
+                    <label for="select_tommy" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_tommy" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/tommy.svg" class="checkboxes-form__img" alt="tommy hilfiger">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_calvin" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_calvin" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/calvin.svg" class="checkboxes-form__img" alt="calvin klein">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_crocs" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_crocs" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/crocs.svg" class="checkboxes-form__img" alt="crocs">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_inwear" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_inwear" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/inwear.svg" class="checkboxes-form__img" alt="inwear matinique">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_clarks" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_clarks" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/clarks.svg" class="checkboxes-form__img" alt="clarks">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_reima" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_reima" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/reima.svg" class="checkboxes-form__img" alt="reima">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_markis" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_markis" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/markis.svg" class="checkboxes-form__img" alt="markis">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_soho" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_soho" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/soho.svg" class="checkboxes-form__img" alt="soho">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_mexx" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_mexx" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/mexx.svg" class="checkboxes-form__img" alt="mexx">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_truman" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_truman" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/truman.svg" class="checkboxes-form__img" alt="truman">
+                    </label>
+                  </li>
+                  <li class="checkboxes-form__field">
+                    <label for="select_origami" class="checkboxes-form__label">
+                      <input type="radio" class="checkboxes-form__input" id="select_origami" name="subscription">
+                      <span class="checkboxes-form__control"></span>
+                      <img src="img/brands/origami.svg" class="checkboxes-form__img" alt="origami">
+                    </label>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </section>
+
+          <!-- Subscription -->
+          <section class="subscription">
+            <h2 class="section-title">Подписка на уведомления об акциях</h2>
+            <p class="section-text subscription__info">
+              Вы можете выбрать один или несколько магазинов, по которым вам интересно получать предложения
+            </p>
+            <form class="checkboxes-form subscription__form" id="subscription_form">
+              <ul class="checkboxes-form__list" role="none">
+                <li class="checkboxes-form__field">
+                  <label for="tommy" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="tommy" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/tommy.svg" class="checkboxes-form__img" alt="tommy hilfiger">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="calvin" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="calvin" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/calvin.svg" class="checkboxes-form__img" alt="calvin klein">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="crocs" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="crocs" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/crocs.svg" class="checkboxes-form__img" alt="crocs">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="inwear" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="inwear" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/inwear.svg" class="checkboxes-form__img" alt="inwear matinique">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="clarks" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="clarks" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/clarks.svg" class="checkboxes-form__img" alt="clarks">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="reima" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="reima" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/reima.svg" class="checkboxes-form__img" alt="reima">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="markis" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="markis" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/markis.svg" class="checkboxes-form__img" alt="markis">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="soho" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="soho" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/soho.svg" class="checkboxes-form__img" alt="soho">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="mexx" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="mexx" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/mexx.svg" class="checkboxes-form__img" alt="mexx">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="truman" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="truman" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/truman.svg" class="checkboxes-form__img" alt="truman">
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="origami" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="origami" name="subscription">
+                    <span class="checkboxes-form__control"></span>
+                    <img src="img/brands/origami.svg" class="checkboxes-form__img" alt="origami">
+                  </label>
+                </li>
+              </ul>
+            </form>
+          </section>
+
+          <!-- Favourite brand -->
+          <section class="favourite-brand">
+            <h2 class="section-title">Любимый бренд</h2>
+            <p class="section-text favourite-brand__info">
+              Расскажите нам о своих любимых брендах, а мы учтем ваш выбор при составлении индивидуальных предложений
+            </p>
+            <form class="checkboxes-form favourite-brand__form" id="fav_brands_form">
+              <ul class="checkboxes-form__list" role="none">
+                <li class="checkboxes-form__field">
+                  <label for="calvin01" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="calvin01" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Calvin klein jeans</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="calvin02" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="calvin02" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Calvin klein jeans</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="calvin03" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="calvin03" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Calvin klein jeans</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="benetton01" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="benetton01" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">United colors of Benetton</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="benetton02" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="benetton02" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">United colors of Benetton</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="benetton03" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="benetton03" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">United colors of Benetton</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="reima01" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="reima01" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Reima</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="reima02" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="reima02" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Reima</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="reima03" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="reima03" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Reima</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="strellson01" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="strellson01" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Strellson</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="strellson02" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="strellson02" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Strellson</span>
+                  </label>
+                </li>
+                <li class="checkboxes-form__field">
+                  <label for="strellson03" class="checkboxes-form__label">
+                    <input type="checkbox" class="checkboxes-form__input" id="strellson03" name="fav_brand_checkbox">
+                    <span class="checkboxes-form__control"></span>
+                    <span class="label">Strellson</span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <h2 class="footer__title">подпишитесь на наши новости</h2>
+          <div class="footer__contacts">
+            <a href="https://msng.link/o/?sharaputo=vk" class="footer__link">
+              <svg width="42" height="42">
+                <use xlink:href="#telegram" />
+              </svg>
+            </a>
+            <a href="https://msng.link/o/?sharaputo=tg" class="footer__link">
+              <svg width="42" height="42">
+                <use xlink:href="#vk" />
+              </svg>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/imask"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
